@@ -13,8 +13,7 @@
     <!-- meta -->
     <!-- meta -->
     <title>Portafolio CV - Cristian</title>
-    <meta name="description"
-        content="Proyecto tienda en línea utilizando Bootstrap 5">
+    <meta name="description" content="Proyecto tienda en línea utilizando Bootstrap 5">
     <link rel="canonical" href="https://cristianramirez5.github.io/marketplace">
     <link rel="favicon" href="https://cristianramirez5.github.io/marketplace/assets/favicon.png">
     <link rel="apple-touch-icon" href="https://cristianramirez5.github.io/marketplace/assets/favicon.png">
@@ -22,14 +21,16 @@
     <meta name="twitter:card" content="summary">
     <meta property="og:type" content="website">
     <meta property="og:title" name="twitter:title" content="Portafolio CV - Cristian">
-    <meta property="og:image" name="twitter:image" content="https://cristianramirez5.github.io/marketplace/assets/hero-image-home.png">
+    <meta property="og:image" name="twitter:image"
+        content="https://cristianramirez5.github.io/marketplace/assets/hero-image-home.png">
     <meta property="og:url" name="twitter:url" content="https://cristianramirez5.github.io/marketplace">
-    <meta property="og:description" name="twitter:description" content="Proyecto tienda en línea utilizando Bootstrap 5">
+    <meta property="og:description" name="twitter:description"
+        content="Proyecto tienda en línea utilizando Bootstrap 5">
 
 </head>
 
 <style>
-    main img {
+    main img{
         width: 100%;
         height: 500px;
         object-fit: cover;
@@ -37,6 +38,22 @@
 
     main>.carousel-container {
         width: 100vw;
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+    .gradient{
+        background-image: linear-gradient(to left, rgb(41, 37, 37),black);
+        opacity: 0.8;
+    }
+    .img-fondo{    
+        background-image: url('./assets/iphone.jpg');
+        background-size: cover;     
+        background-position: bottom;   
+        background-attachment: fixed;
     }
 </style>
 
@@ -46,8 +63,8 @@
     <header>
         <div class="container-fluid">
 
-            <div class="row bg-dark py-3">
-                <div class="col-12 sticky-top ">
+            <div class="row bg-dark py-3 fixed-top">
+                <div class="col-12  ">
 
                     <div class="row  align-items-center">
 
@@ -61,19 +78,23 @@
 
                         <!-- TITULO -->
                         <div class="col-6 col-md-3">
-                            <h1 class="text-white text-center text-md-start mb-0 fs-3 "><i class="bi bi-handbag me-1"></i>Store</h1>
+                            <h1 class="text-white text-center text-md-start mb-0 fs-3 "><i
+                                    class="bi bi-handbag me-1"></i>Store</h1>
                         </div>
-                         
+
                         <!-- SEARCH AND CART -->
                         <div class="col-4 col-md-7 text-end offset-md-2">
                             <div class="input-group  d-md-inline">
-                                <input type="search" class="w-50 d-none form-control form-control-sm d-md-inline-block shadow-none ">
-                                <button class="d-none  m-0 d-md-inline-block  btn  text-white "><i class="bi bi-search"></i></button>
+                                <input type="search"
+                                    class="w-50 d-none form-control form-control-sm d-md-inline-block shadow-none ">
+                                <button class="d-none  m-0 d-md-inline-block  btn  text-white "><i
+                                        class="bi bi-search"></i></button>
 
                             </div>
-                             
 
-                            <button class="btn d-md-none  text-white " data-bs-toggle="modal" data-bs-target="#modalSearch"><i class="bi bi-search"></i></button>                            
+
+                            <button class="btn d-md-none  text-white " data-bs-toggle="modal"
+                                data-bs-target="#modalSearch"><i class="bi bi-search"></i></button>
 
                             <button class="btn  text-white" data-bs-toggle="modal" data-bs-target="#modalCart"><i
                                     class="bi bi-cart"></i></button>
@@ -93,7 +114,8 @@
 
                         <!-- OFFCANVAS HEADER -->
                         <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel"><i class="bi bi-handbag me-1"></i>Store</h5>
+                            <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel"><i
+                                    class="bi bi-handbag me-1"></i>Store</h5>
                             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                                 aria-label="Close"></button>
                             <hr>
@@ -102,128 +124,146 @@
                         <!-- OFFCANVAS BODY -->
                         <div class="offcanvas-body px-0">
                             <div class="accordion accordion-flush" id="accordionFlushExample">
-                                
+
                                 <!-- ITEM 1 -->
                                 <div class="accordion-item">
-                                  <h2 class="accordion-header" id="flush-headingOne">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion1" aria-expanded="false" aria-controls="accordion1">
-                                      Computadoras
-                                    </button>
-                                  </h2>
-                                  <div id="accordion1" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body p-0">
-                                        <div class="list-group">
-                                            <a href="#" class="list-group-item list-group-item-action ps-5">Escritorio</a>
-                                            <a href="#" class="list-group-item list-group-item-action ps-5">Laptops</a>
-                                            <a href="#" class="list-group-item list-group-item-action ps-5">Notebooks</a>
-                                        </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <!-- ITEM2 -->
-                                <div class="accordion-item">
-                                  <h2 class="accordion-header" id="flush-headingOne">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion2" aria-expanded="false" aria-controls="accordion2">
-                                      Smartphones
-                                    </button>
-                                  </h2>
-                                  <div id="accordion2" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body p-0">
-                                        <div class="list-group">
-                                            <a href="#" class="list-group-item list-group-item-action ps-5">Iphone</a>
-                                            <a href="#" class="list-group-item list-group-item-action ps-5">Samsung</a>
-                                            <a href="#" class="list-group-item list-group-item-action ps-5">Xiaomi</a>
-                                        </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <!-- ITEM3 -->
-                                <div class="accordion-item">
-                                  <h2 class="accordion-header" id="flush-headingOne">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion3" aria-expanded="false" aria-controls="accordion3">
-                                      Tablets
-                                    </button>
-                                  </h2>
-                                  <div id="accordion3" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body p-0">
-                                        <div class="list-group">
-                                            <a href="#" class="list-group-item list-group-item-action ps-5">Ipad</a>
-                                            <a href="#" class="list-group-item list-group-item-action ps-5">Samsung</a>
-                                            <a href="#" class="list-group-item list-group-item-action ps-5">Xiaomi</a>
-                                        </div>
-                                    </div>
-                                  </div>
-                                </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- MODAL SEARCH -->
-                <div class="col-12">
-                    <div class="modal fade" id="modalSearch" tabindex="-1" aria-labelledby="modalSearchLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title text-center" id="modalSearchLabel">Buscar productos</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body d-flex">
-                                    <input type="search" class="form-control shadow-none">
-                                    <button class="btn btn-light shadow-none"><i class="bi bi-search"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12">
-
-                    <!-- MODAL CART -->
-                    <div class="modal fade" id="modalCart" tabindex="-1" aria-labelledby="modalCartLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="modalCartLabel">Carrito de compras</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <!-- PRODUCTOS -->
-                                    <div class="card-group">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-7">
-                                                    <img src="assets/drone.jpg" alt="drone1" class="img-fluid">
-                                                </div>
-                                                <div class="col-5">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Drone GTX</h5>
-                                                        <div class="card-text">
-                                                            <p>Precio: <strong>3500.00 MXN</strong></p>
-                                                            <a href="#" class="btn btn-primary btn-sm">Comprar</a>
-                                                            <a href="#" class="btn btn-primary btn-sm">Quitar</a>
-                                                        </div>
-                                                    </div>
-                                                    
-                                                </div>
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#accordion1" aria-expanded="false"
+                                            aria-controls="accordion1">
+                                            Computadoras
+                                        </button>
+                                    </h2>
+                                    <div id="accordion1" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body p-0">
+                                            <div class="list-group">
+                                                <a href="#computadoras"
+                                                    class="list-group-item list-group-item-action ps-5"
+                                                    data-bs-dismiss="offcanvas">Escritorio</a>
+                                                <a href="#laptop" class="list-group-item list-group-item-action ps-5"
+                                                    data-bs-dismiss="offcanvas">Laptops</a>
+                                                <a href="#mac" class="list-group-item list-group-item-action ps-5"
+                                                    data-bs-dismiss="offcanvas">Mac</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="modal-footer">                                        
-                                        <button type="button" class="btn btn-primary">Comprar todo</button>
+                                </div>
+                                <!-- ITEM2 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#accordion2" aria-expanded="false"
+                                            aria-controls="accordion2">
+                                            Smartphones
+                                        </button>
+                                    </h2>
+                                    <div id="accordion2" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body p-0">
+                                            <div class="list-group">
+                                                <a href="#"
+                                                    class="list-group-item list-group-item-action ps-5">Iphone</a>
+                                                <a href="#"
+                                                    class="list-group-item list-group-item-action ps-5">Samsung</a>
+                                                <a href="#"
+                                                    class="list-group-item list-group-item-action ps-5">Xiaomi</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ITEM3 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#accordion3" aria-expanded="false"
+                                            aria-controls="accordion3">
+                                            Tablets
+                                        </button>
+                                    </h2>
+                                    <div id="accordion3" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body p-0">
+                                            <div class="list-group">
+                                                <a href="#" class="list-group-item list-group-item-action ps-5">Ipad</a>
+                                                <a href="#"
+                                                    class="list-group-item list-group-item-action ps-5">Samsung</a>
+                                                <a href="#"
+                                                    class="list-group-item list-group-item-action ps-5">Xiaomi</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- MODAL SEARCH -->
+                    <div class="col-12">
+                        <div class="modal fade" id="modalSearch" tabindex="-1" aria-labelledby="modalSearchLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-center" id="modalSearchLabel">Buscar productos</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body d-flex">
+                                        <input type="search" class="form-control shadow-none">
+                                        <button class="btn btn-light shadow-none"><i class="bi bi-search"></i></button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
+                    <div class="col-12">
 
+                        <!-- MODAL CART -->
+                        <div class="modal fade" id="modalCart" tabindex="-1" aria-labelledby="modalCartLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalCartLabel">Carrito de compras</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- PRODUCTOS -->
+                                        <div class="card-group">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-7">
+                                                        <img src="assets/drone.jpg" alt="drone1" class="img-fluid">
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Drone GTX</h5>
+                                                            <div class="card-text">
+                                                                <p>Precio: <strong>3500.00 MXN</strong></p>
+                                                                <a href="#" class="btn btn-primary btn-sm">Comprar</a>
+                                                                <a href="#" class="btn btn-primary btn-sm">Quitar</a>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary">Comprar todo</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
                 </div>
-            </div>
     </header>
 
 
@@ -278,10 +318,149 @@
 
         </div>
 
-        <div class="container-fluid p-0 mb-5">
-            <h2 id="computadoras" class="text-dark text-center mb-2">Computadoras</h2>
-            <img src="assets/mac.jpg" alt="mac">
-        </div>
+        <!-- SECTION-COMPUTADORAS -->
+        <section id="computadoras" class="computadoras mb-4">
+            <div class="container">
+
+                <h2 class="text-center mb-3">Computadoras</h2>
+
+                <div class="row row-cols-1 row-cols-md-2 gy-4">
+
+                    <div class="col-12" id="Laptop">
+
+                        <div class="card border ">
+                            <img src="assets/laptop.jpg" alt="laptop1" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    Laptop GXF-lfg1
+                                </h3>
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, consectetur!
+                                </p>
+                                <a href="#" class="btn btn-dark">Agregar <i class="bi bi-cart"></i></a>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-12" id="laptop">
+
+                        <div class="card border ">
+                            <img src="assets/laptop2.jpg" alt="laptop2" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    Laptop GXF-83hd
+                                </h3>
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, consectetur!
+                                </p>
+                                <a href="#" class="btn btn-dark">Agregar <i class="bi bi-cart"></i></a>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12" id="mac">
+
+
+                        <div class="card border ">
+                            <img src="assets/mac.jpg" alt="mac" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    Mac GXF-83hd
+                                </h3>
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, consectetur!
+                                </p>
+                                <a href="#" class="btn btn-dark">Agregar <i class="bi bi-cart"></i></a>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION TABLETS -->
+        <section class="tablets position-relative mb-4">
+            <div class="container-fluid p-0">
+                <div class="img-fondo" style="width: 100vw; height: 500px;"></div>                
+
+                        <div class="position-absolute start-0 top-0 bg-light h-100 w-100 gradient d-flex justify-content-center">
+                            <h3 class="text-white fw-bold align-self-center fs-1">Smartphones</h3>
+                        </div>
+                         
+                </div>
+            </div>             
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-3 ">
+
+                    <div class="col-12" id="Laptop">
+
+                        <div class="card border ">
+                            <img src="assets/phone.jpg" alt="phone" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    Laptop GXF-lfg1
+                                </h3>
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, consectetur!
+                                </p>
+                                <a href="#" class="btn btn-dark">Agregar <i class="bi bi-cart"></i></a>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-12" id="laptop">
+
+                        <div class="card border ">
+                            <img src="assets/phone2.jpg" alt="phone2" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    Laptop GXF-83hd
+                                </h3>
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, consectetur!
+                                </p>
+                                <a href="#" class="btn btn-dark">Agregar <i class="bi bi-cart"></i></a>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12" id="mac">
+
+
+                        <div class="card border ">
+                            <img src="assets/iphone.jpg" alt="iphone" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    Mac GXF-83hd
+                                </h3>
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, consectetur!
+                                </p>
+                                <a href="#" class="btn btn-dark">Agregar <i class="bi bi-cart"></i></a>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+
+         
+
 
     </main>
 
