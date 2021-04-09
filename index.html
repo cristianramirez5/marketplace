@@ -30,11 +30,12 @@
 </head>
 
 <style>
-    main img {
+    .carousel-inner img {
         width: 100%;
         height: 500px;
         object-fit: cover;
     }
+
 
     main>.carousel-container {
         width: 100%;
@@ -49,6 +50,12 @@
     .gradient {
         background-image: linear-gradient(to left, rgb(41, 37, 37), black);
         opacity: 0.8;
+    }
+
+    header .img-carrito {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
     }
 
     .img-fondo {
@@ -72,7 +79,7 @@
 
                     <div class="row  align-items-center">
 
-                        <!-- MENU -->
+                        <!-- NAV -->
                         <div class="col-2 d-md-none">
                             <button class="btn shadow-none text-white" type="button" data-bs-toggle="offcanvas"
                                 data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop"><i
@@ -82,8 +89,9 @@
 
                         <!-- TITULO -->
                         <div class="col-6 col-md-3">
-                            <h1 class="text-white text-center text-md-center mb-0 fs-3 "><i
-                                    class="bi bi-handbag me-1"></i>Store</h1>
+                            <h1 class="text-center text-md-center mb-0 fs-3 "><a href="#"
+                                    class="text-decoration-none text-white"><i class="bi bi-handbag me-1"></i>Store</a>
+                            </h1>
                         </div>
 
                         <!-- SEARCH AND CART -->
@@ -91,14 +99,11 @@
                             <div class="input-group  d-md-inline">
                                 <input type="search" placeholder="Busca lo que quieras"
                                     class="w-50 d-none form-control form-control-sm d-md-inline-block shadow-none ">
-                                <button class="d-none  m-0 d-md-inline-block  btn  text-white "><i
+                                <button class="d-none  m-0 d-md-inline-block shadow-none btn  text-white "><i
                                         class="bi bi-search"></i></button>
-
                             </div>
 
-
-
-                            <button class="btn  text-white" data-bs-toggle="modal" data-bs-target="#modalCart"><i
+                            <button class="btn  text-white shadow-none" data-bs-toggle="modal" data-bs-target="#modalCart"><i
                                     class="bi bi-cart"></i></button>
 
                             <button class="btn text-white fs-5 shadow-none"><i class="bi bi-person"></i></button>
@@ -123,7 +128,7 @@
                             <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel"><i
                                     class="bi bi-handbag me-1"></i>Store</h5>
                             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>                                                            
+                                aria-label="Close"></button>
                             <hr>
                         </div>
 
@@ -131,8 +136,9 @@
                         <div class="offcanvas-body px-0">
                             <div class="accordion accordion-flush" id="accordionFlushExample">
 
-                                <div class="input-group mb-3 input-group-sm">   
-                                    <input type="search " class="form-control d-md-none border shadow-none" placeholder="Buscar productos">
+                                <div class="input-group mb-3 input-group-sm">
+                                    <input type="search " class="form-control d-md-none border shadow-none"
+                                        placeholder="Buscar productos">
                                     <btn class="bi bi-search input-group-text btn btn-secondary"></btn>
                                 </div>
 
@@ -149,7 +155,7 @@
                                         aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body p-0">
                                             <div class="list-group">
-                                                <a href="#computadoras"
+                                                <a href="#escritorio"
                                                     class="list-group-item list-group-item-action ps-5"
                                                     data-bs-dismiss="offcanvas">Escritorio</a>
                                                 <a href="#laptop" class="list-group-item list-group-item-action ps-5"
@@ -173,12 +179,12 @@
                                         aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body p-0">
                                             <div class="list-group">
-                                                <a href="#"
-                                                    class="list-group-item list-group-item-action ps-5">Iphone</a>
-                                                <a href="#"
-                                                    class="list-group-item list-group-item-action ps-5">Samsung</a>
-                                                <a href="#"
-                                                    class="list-group-item list-group-item-action ps-5">Xiaomi</a>
+                                                <a href="#iphone" class="list-group-item list-group-item-action ps-5"
+                                                    data-bs-dismiss="offcanvas">Iphone</a>
+                                                <a href="#samsung" class="list-group-item list-group-item-action ps-5"
+                                                    data-bs-dismiss="offcanvas">Samsung</a>
+                                                <a href="#xiaomi" class="list-group-item list-group-item-action ps-5"
+                                                    data-bs-dismiss="offcanvas">Xiaomi</a>
                                             </div>
                                         </div>
                                     </div>
@@ -209,72 +215,121 @@
                         </div>
 
                     </div>
+                </div>
+            </div>
 
-                    <!-- MODAL SEARCH -->
-                    <div class="col-12">
-                        <div class="modal fade" id="modalSearch" tabindex="-1" aria-labelledby="modalSearchLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title text-center" id="modalSearchLabel">Buscar productos</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body d-flex">
-                                        <input type="search" class="form-control shadow-none">
-                                        <button class="btn btn-light shadow-none"><i class="bi bi-search"></i></button>
-                                    </div>
+            <div class="row">
+                <!-- MODAL SEARCH -->
+                <div class="col-12">
+                    <div class="modal fade" id="modalSearch" tabindex="-1" aria-labelledby="modalSearchLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-center" id="modalSearchLabel">Buscar productos</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body d-flex">
+                                    <input type="search" class="form-control shadow-none">
+                                    <button class="btn btn-light shadow-none"><i class="bi bi-search"></i></button>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <div class="col-12">
+            <!-- MODAL CART -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="modal fade" id="modalCart" tabindex="-1" aria-labelledby="modalCartLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalCartLabel">Carrito de compras</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
 
-                        <!-- MODAL CART -->
-                        <div class="modal fade" id="modalCart" tabindex="-1" aria-labelledby="modalCartLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="modalCartLabel">Carrito de compras</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
+                                <!-- PRODUCTOS -->
+                                <div class="modal-body">
+
+                                    <div class="row">
+                                        <div class="col-6 col-md-3 col-lg-2">Productos</div>
+                                        <div class="col-6 col-md-3 d-none d-lg-inline-block">Descripcion</div>
+                                        <div class="col-md-3 col-lg-2 d-none d-lg-inline-block">Precio</div>
+                                        <div class="d-none d-lg-inline-block col-md-4 col-lg-2">cantidad</div>
+                                        <div class="d-none d-lg-inline-block col-md-2">Total + Envío</div>
+                                        <div class="col-md-3 col-lg-1 d-none d-lg-inline-block">Eliminar</div>
+                                        <hr>
                                     </div>
-                                    <div class="modal-body">
-                                        <!-- PRODUCTOS -->
-                                        <div class="card-group">
-                                            <div class="card mb-3">
-                                                <div class="row g-0">
-                                                    <div class="col-7">
-                                                        <img src="assets/drone.jpg" alt="drone1" class="img-fluid">
+                                    <div class="row">
+                                        <div class="col-5 col-md-5 col-lg-2">
+                                            <img src="assets/iphone.jpg" alt="iphone" class="img-carrito ">
+                                        </div>
+                                        <div class="col-6 col-md-3 d-none d-lg-inline-block">
+                                            Iphone X 64GB
+                                        </div>
+                                        <!-- Only mobil -->
+                                        <div class="col-7 col-md-7 col-lg-2 align-self-start d-lg-none">
+                                            <div class="row align-items-center g-2">
+                                                <div class="col-12">
+                                                    <span>Nombre: Iphone X</span>
+                                                </div>
+                                                <div class="col-12">
+                                                    <span>Precio: </span> $4534.00 MXN
+                                                </div>
+                                                <div class="col-5">
+                                                    <span>Cantidad:</span>
+                                                </div>
+                                                <div class="col-7">
+                                                    <div class="input-group  input-group-sm  w-75 ">
+                                                        <button class="btn btn-secondary py-0">-</button>
+                                                        <input type="text" class="form-control shadow-none py-0"
+                                                            value="1">
+                                                        <button class="btn btn-secondary py-0">+</button>
                                                     </div>
-                                                    <div class="col-5">
-                                                        <div class="card-body">
-                                                            <h5 class="card-title">Drone GTX</h5>
-                                                            <div class="card-text">
-                                                                <p>Precio: <strong>3500.00 MXN</strong></p>
-                                                                <a href="#" class="btn btn-primary btn-sm">Comprar</a>
-                                                                <a href="#" class="btn btn-primary btn-sm">Quitar</a>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <button class="btn btn-primary btn-sm p-0 px-1">Comprar</button>
+                                                    <button class="btn btn-outline-secondary btn-sm p-0 px-1"><i
+                                                            class="bi bi-trash-fill"></i></button>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-primary">Comprar todo</button>
+
+                                        <div class="col-md-3 col-lg-2 d-none d-lg-inline-block">$4534.00 MXN</div>
+                                        <div class="d-none d-lg-inline-block col-md-4 col-lg-2">
+                                            <div class="input-group input-group-sm w-75">
+                                                <button class="btn btn-secondary">-</button>
+                                                <input type="text" class="form-control shadow-none" value="1">
+                                                <button class="btn btn-secondary">+</button>
+                                            </div>
                                         </div>
+                                        <div class="col-md-3 col-lg-2 d-none d-lg-inline-block">$4634.00 MXN</div>
+                                        <div class="col-md-3 col-lg-1 d-none d-lg-inline-block">
+                                            <button class="btn btn-secondary btn-sm shadow-none"><i
+                                                    class="bi bi-trash-fill"></i></button>
+                                        </div>
+                                        <div class="col-12 mt-5 text-end">
+                                            <span>Total: $4534.00 MXN</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer mt-4">
+                                        <button type="button" class="btn btn-primary">Comprar todo</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
+
+
                 </div>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -293,14 +348,14 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="assets/ipad.jpg" class="" alt="Ipad">
+                        <img src="assets/ipad.jpg" class="img-fluid" alt="Ipad">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Los mejores productos</h5>
                             <p>al mejor precio</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="assets/drone2.jpg" class="" alt="...">
+                        <img src="assets/drone2.jpg" class="" alt="drone">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Tenemos cientos de ofertas</h5>
                             <p>No lo pienses más</p>
@@ -329,20 +384,20 @@
         </div>
 
         <!-- SECTION-COMPUTADORAS -->
-        <section id="computadoras" class="computadoras mb-4">
+        <section class="computadoras mb-4">
             <div class="container">
 
-                <h2 class="text-center mb-3">Computadoras</h2>
+                <h2 class="text-center mb-3" id="computadoras">Computadoras</h2>
 
                 <div class="row row-cols-1 row-cols-md-2 gy-4">
 
-                    <div class="col-12" id="Laptop">
+                    <div class="col-12" id="escritorio">
 
                         <div class="card border ">
-                            <img src="assets/laptop.jpg" alt="laptop1" class="card-img-top">
+                            <img src="assets/desktop.jpg" alt="desktop" class="card-img-top">
                             <div class="card-body">
                                 <h3 class="card-title">
-                                    Laptop GXF-lfg1
+                                    Desktop GXF-lfg1
                                 </h3>
                                 <p class="card-text">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, consectetur!
@@ -372,8 +427,6 @@
                     </div>
 
                     <div class="col-12" id="mac">
-
-
                         <div class="card border ">
                             <img src="assets/mac.jpg" alt="mac" class="card-img-top">
                             <div class="card-body">
@@ -387,7 +440,6 @@
                                 <a href="#" class="btn btn-primary">Comprar</a>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
@@ -412,49 +464,49 @@
             <div class="container-lg">
                 <div class="row row-cols-1 row-cols-md-3 gy-4">
 
-                    <div class="col-12" id="Laptop">
-
-                        <div class="card border ">
-                            <img src="assets/phone.jpg" alt="phone" class="card-img-top">
-                            <div class="card-body">
-                                <h3 class="card-title">
-                                    Laptop GXF-lfg1
-                                </h3>
-                                <p class="card-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, consectetur!
-                                </p>
-                                <a href="#" class="btn btn-dark">Agregar <i class="bi bi-cart"></i></a>
-                                <a href="#" class="btn btn-primary">Comprar</a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-12" id="laptop">
-
-                        <div class="card border ">
-                            <img src="assets/phone2.jpg" alt="phone2" class="card-img-top">
-                            <div class="card-body">
-                                <h3 class="card-title">
-                                    Laptop GXF-83hd
-                                </h3>
-                                <p class="card-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, consectetur!
-                                </p>
-                                <a href="#" class="btn btn-dark">Agregar <i class="bi bi-cart"></i></a>
-                                <a href="#" class="btn btn-primary">Comprar</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12" id="mac">
-
+                    <div class="col-12" id="iphone">
 
                         <div class="card border ">
                             <img src="assets/iphone.jpg" alt="iphone" class="card-img-top">
                             <div class="card-body">
                                 <h3 class="card-title">
-                                    Mac GXF-83hd
+                                    Iphone
+                                </h3>
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, consectetur!
+                                </p>
+                                <a href="#" class="btn btn-dark">Agregar <i class="bi bi-cart"></i></a>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-12" id="samsung">
+
+                        <div class="card border ">
+                            <img src="assets/phone.jpg" alt="phone" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    Samsung Galaxy
+                                </h3>
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, consectetur!
+                                </p>
+                                <a href="#" class="btn btn-dark">Agregar <i class="bi bi-cart"></i></a>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12" id="xiaomi">
+
+
+                        <div class="card border ">
+                            <img src="assets/phone2.jpg" alt="xiaomi" class="card-img-top">
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    Xiaomi
                                 </h3>
                                 <p class="card-text">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, consectetur!
@@ -470,7 +522,7 @@
         </section>
 
     </main>
-    
+
 
 
     <!-- FOOTER -->
@@ -481,11 +533,11 @@
                     <h3 class="text-center">Contacto</h3>
                 </div>
                 <div class="col-8 col-md-4 text-white mx-auto d-flex justify-content-between mb-4">
-                    <i class="bi bi-facebook  fs-3"></i>
-                    <i class="bi bi-twitter fs-3"></i>
-                    <i class="bi bi-youtube fs-3"></i>
-                    <i class="bi bi-instagram fs-3"></i>
-                    <i class="bi bi-github fs-3"></i>
+                    <a href="#"><i class="text-white bi bi-facebook  fs-3"></i></a>
+                    <a href="#"><i class="text-white bi bi-twitter fs-3"></i></a>
+                    <a href="#"><i class="text-white bi bi-youtube fs-3"></i></a>
+                    <a href="#"><i class="text-white bi bi-instagram fs-3"></i></a>
+                    <a href="#"><i class="text-white bi bi-github fs-3"></i></a>
                 </div>
             </div>
 
@@ -521,7 +573,7 @@
                     </ul>
                 </div>
                 <div class="col-12 mt-4 ">
-                    <h6 class="text-center text-muted">Página diseñada por @crisram5</h6>
+                    <h6 class="text-center text-muted">Sitio diseñado por @crisram5</h6>
                 </div>
             </div>
 
