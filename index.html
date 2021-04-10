@@ -30,6 +30,7 @@
 </head>
 
 <style>
+     
     .carousel-inner img {
         width: 100%;
         height: 500px;
@@ -58,8 +59,9 @@
         object-fit: cover;
     }
 
-    .img-fondo {
-        background-image: url('./assets/iphone.jpg');
+    .img-fondo {        
+        /* background-image: url('./assets/iphone.jpg'); */
+        /* background-image: var(--img-fondo); */
         background-size: cover;
         width: 100%;
         height: 500px;
@@ -74,7 +76,7 @@
     <header>
         <div class="container-fluid">
 
-            <div class="row bg-dark py-3 fixed-top">
+            <div class="row bg-dark py-3 fixed-top" >
                 <div class="col-12  ">
 
                     <div class="row  align-items-center">
@@ -94,7 +96,7 @@
                             </h1>
                         </div>
 
-                        <!-- SEARCH AND CART -->
+                        <!-- SEARCH CART    Y SESSION -->
                         <div class="col-4 col-md-7 text-end offset-md-2">
                             <div class="input-group  d-md-inline">
                                 <input type="search" placeholder="Busca lo que quieras"
@@ -103,10 +105,11 @@
                                         class="bi bi-search"></i></button>
                             </div>
 
-                            <button class="btn  text-white shadow-none" data-bs-toggle="modal" data-bs-target="#modalCart"><i
-                                    class="bi bi-cart"></i></button>
+                            <button class="btn  text-white shadow-none" data-bs-toggle="modal"
+                                data-bs-target="#modalCart"><i class="bi bi-cart"></i></button>
 
-                            <button class="btn text-white fs-5 shadow-none"><i class="bi bi-person"></i></button>
+                            <button class="btn text-white fs-5 shadow-none" data-bs-toggle="modal"
+                                data-bs-target="#modalSession"><i class="bi bi-person"></i></button>
                         </div>
 
                     </div>
@@ -142,7 +145,7 @@
                                     <btn class="bi bi-search input-group-text btn btn-secondary"></btn>
                                 </div>
 
-                                <!-- ITEM 1 -->
+                                <!-- COMPUTADORAS 1 -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="flush-headingOne">
                                         <button class="accordion-button collapsed" type="button"
@@ -166,7 +169,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- ITEM2 -->
+                                <!-- SMARTPHONES -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="flush-headingOne">
                                         <button class="accordion-button collapsed" type="button"
@@ -189,7 +192,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- ITEM3 -->
+                                <!-- TABLETS -->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="flush-headingOne">
                                         <button class="accordion-button collapsed" type="button"
@@ -202,10 +205,10 @@
                                         aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body p-0">
                                             <div class="list-group">
-                                                <a href="#" class="list-group-item list-group-item-action ps-5">Ipad</a>
-                                                <a href="#"
+                                                <a href="#ipad" class="list-group-item list-group-item-action ps-5">Ipad</a>
+                                                <a href="#samsung-tab"
                                                     class="list-group-item list-group-item-action ps-5">Samsung</a>
-                                                <a href="#"
+                                                <a href="#xiaomi-tab"
                                                     class="list-group-item list-group-item-action ps-5">Xiaomi</a>
                                             </div>
                                         </div>
@@ -218,21 +221,37 @@
                 </div>
             </div>
 
+            <!-- MODAL SESSION -->
             <div class="row">
-                <!-- MODAL SEARCH -->
                 <div class="col-12">
-                    <div class="modal fade" id="modalSearch" tabindex="-1" aria-labelledby="modalSearchLabel"
+                    <div class="modal fade overflow-hidden" id="modalSession" tabindex="-1" aria-labelledby="modalSessionLabel"
                         aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title text-center" id="modalSearchLabel">Buscar productos</h5>
+                        <div class="modal-dialog position-relative w-100 h-100 me-md-2 me-lg-1 me-xl-0 mt-5">
+                            <div class="modal-content shadow-sm w-50 m-0 position-absolute end-0 me-3 me-md-0 mt-1">
+                                <div class="modal-header ">
+                                    <h5 class="modal-title text-center" id="modalSessionLabel">Usuario X</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body d-flex">
-                                    <input type="search" class="form-control shadow-none">
-                                    <button class="btn btn-light shadow-none"><i class="bi bi-search"></i></button>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-4 mx-auto">
+                                            <a href="#"><img class="img-fluid" src="assets/user.png" alt="user"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        Usuario X
+                                        usuario@usuario.com
+                                    </div>
+                                    <hr>
+                                    <div class="col-12">
+                                        <ul class="list group ps-0 list-unstyled">
+                                            <li class="list-group-item list-group-item-action border-0"><a class="text-decoration-none" href="#">Mi cuenta</a></li>
+                                            <li class="list-group-item list-group-item-action border-0"><a class="text-decoration-none" href="#">Mis compras</a></li>
+                                            <li class="list-group-item list-group-item-action border-0"><a class="text-decoration-none" href="#">Pedidos</a></li>
+                                            <li class="list-group-item list-group-item-action border-0"><a class="text-decoration-none" href="#">Cerrar sesión</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -348,7 +367,7 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="assets/ipad.jpg" class="img-fluid" alt="Ipad">
+                        <img src="assets/ipad.jpg" class="" alt="Ipad">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Los mejores productos</h5>
                             <p>al mejor precio</p>
@@ -384,10 +403,20 @@
         </div>
 
         <!-- SECTION-COMPUTADORAS -->
-        <section class="computadoras mb-4">
-            <div class="container">
+        <section class="tablets position-relative mb-4">
+            <div class="container-fluid p-0">
+                <div class="img-fondo" style="background-image: url('./assets/laptop3.jpg');"></div>
 
-                <h2 class="text-center mb-3" id="computadoras">Computadoras</h2>
+                <div
+                    class="position-absolute start-0 top-0 bg-light h-100 w-100 gradient d-flex justify-content-center">
+                    <h3 class="text-white fw-bold align-self-center fs-1">Computadoras</h3>
+                </div>
+
+            </div>
+            </div>
+        </section>
+        <section class="computadoras mb-4">
+            <div class="container">                
 
                 <div class="row row-cols-1 row-cols-md-2 gy-4">
 
@@ -449,7 +478,7 @@
         <!-- SECTION SMARTPHONES -->
         <section class="tablets position-relative mb-4">
             <div class="container-fluid p-0">
-                <div class="img-fondo"></div>
+                <div class="img-fondo" style="background-image: url('./assets/iphone.jpg');"></div>
 
                 <div
                     class="position-absolute start-0 top-0 bg-light h-100 w-100 gradient d-flex justify-content-center">
@@ -523,6 +552,78 @@
 
     </main>
 
+    <!-- SECTION TABLETS -->
+    <section class="tablets position-relative mb-4">
+        <div class="container-fluid p-0">
+            <div class="img-fondo" style="background-image: url('./assets/tablet1.jpg');"></div>
+
+            <div
+                class="position-absolute start-0 top-0 bg-light h-100 w-100 gradient d-flex justify-content-center">
+                <h3 class="text-white fw-bold align-self-center fs-1">Tablets</h3>
+            </div>
+
+        </div>
+        </div>
+    </section>
+    <section class="computadoras mb-4">
+        <div class="container">                
+
+            <div class="row row-cols-1 row-cols-md-2 gy-4">
+
+                <div class="col-12" id="ipad">
+
+                    <div class="card border ">
+                        <img src="assets/ipad.jpg" alt="ipad" class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">
+                                Ipad GXF-lfg1
+                            </h3>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, consectetur!
+                            </p>
+                            <a href="#" class="btn btn-dark">Agregar <i class="bi bi-cart"></i></a>
+                            <a href="#" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12" id="samsung-tab">
+
+                    <div class="card border ">
+                        <img src="assets/tablet1.jpg" alt="tablet samsung" class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">
+                                Samsung Galaxy Tab GXF-83hd
+                            </h3>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, consectetur!
+                            </p>
+                            <a href="#" class="btn btn-dark">Agregar <i class="bi bi-cart"></i></a>
+                            <a href="#" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12" id="xiaomi-tab">
+                    <div class="card border ">
+                        <img src="assets/tablet2.jpg" alt="tablet xiaomi" class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">
+                                Xiaomi GXF-83hd
+                            </h3>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, consectetur!
+                            </p>
+                            <a href="#" class="btn btn-dark">Agregar <i class="bi bi-cart"></i></a>
+                            <a href="#" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
 
     <!-- FOOTER -->
