@@ -68,6 +68,16 @@
         background-position: center;
         background-attachment: fixed;
     }
+    @media screen and (max-width: 370px){
+        .res-sm{
+            padding-left: 0 !important;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+        .res-width{
+            width: 75% !important;
+        }
+    }
 </style>
 
 <body>
@@ -76,7 +86,7 @@
     <header>
         <div class="container-fluid">
 
-            <div class="row bg-dark py-3 fixed-top" >
+            <div class="row bg-dark py-3 fixed-top res-sm" >
                 <div class="col-12  ">
 
                     <div class="row  align-items-center">
@@ -90,26 +100,26 @@
                         </div>
 
                         <!-- TITULO -->
-                        <div class="col-6 col-md-3">
+                        <div class="col-5 col-md-3">
                             <h1 class="text-center text-md-center mb-0 fs-3 "><a href="#"
                                     class="text-decoration-none text-white"><i class="bi bi-handbag me-1"></i>Store</a>
                             </h1>
                         </div>
 
                         <!-- SEARCH CART    Y SESSION -->
-                        <div class="col-4 col-md-7 text-end offset-md-2">
+                        <div class="col-5 col-md-7 text-end offset-md-2 ps-0">
                             <div class="input-group  d-md-inline">
                                 <input type="search" placeholder="Busca lo que quieras"
                                     class="w-50 d-none form-control form-control-sm d-md-inline-block shadow-none ">
-                                <button class="d-none  m-0 d-md-inline-block shadow-none btn  text-white "><i
+                                <button class="d-none  m-0 d-md-inline-block shadow-none btn  text-white " title="buscar"><i
                                         class="bi bi-search"></i></button>
                             </div>
 
                             <button class="btn  text-white shadow-none" data-bs-toggle="modal"
-                                data-bs-target="#modalCart"><i class="bi bi-cart"></i></button>
+                                data-bs-target="#modalCart" title="Carrito de compras"><i class="bi bi-cart"></i></button>
 
                             <button class="btn text-white fs-5 shadow-none" data-bs-toggle="modal"
-                                data-bs-target="#modalSession"><i class="bi bi-person"></i></button>
+                                data-bs-target="#modalSession" title="Perfil"><i class="bi bi-person"></i></button>
                         </div>
 
                     </div>
@@ -145,7 +155,7 @@
                                     <btn class="bi bi-search input-group-text btn btn-secondary"></btn>
                                 </div>
 
-                                <!-- COMPUTADORAS 1 -->
+                                <!-- COMPUTADORAS-->
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="flush-headingOne">
                                         <button class="accordion-button collapsed" type="button"
@@ -205,11 +215,11 @@
                                         aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body p-0">
                                             <div class="list-group">
-                                                <a href="#ipad" class="list-group-item list-group-item-action ps-5">Ipad</a>
+                                                <a href="#ipad" class="list-group-item list-group-item-action ps-5" data-bs-dismiss="offcanvas">Ipad</a>
                                                 <a href="#samsung-tab"
-                                                    class="list-group-item list-group-item-action ps-5">Samsung</a>
+                                                    class="list-group-item list-group-item-action ps-5" data-bs-dismiss="offcanvas">Samsung</a>
                                                 <a href="#xiaomi-tab"
-                                                    class="list-group-item list-group-item-action ps-5">Xiaomi</a>
+                                                    class="list-group-item list-group-item-action ps-5" data-bs-dismiss="offcanvas">Xiaomi</a>
                                             </div>
                                         </div>
                                     </div>
@@ -226,8 +236,8 @@
                 <div class="col-12">
                     <div class="modal fade overflow-hidden" id="modalSession" tabindex="-1" aria-labelledby="modalSessionLabel"
                         aria-hidden="true">
-                        <div class="modal-dialog position-relative w-100 h-100 me-md-2 me-lg-1 me-xl-0 mt-5">
-                            <div class="modal-content shadow-sm w-50 m-0 position-absolute end-0 me-3 me-md-0 mt-1">
+                        <div class="modal-dialog position-relative w-100 h-100 me-2 me-md-2 me-lg-2  mt-5">
+                            <div class="modal-content shadow-sm w-50 m-0 position-absolute end-0 me-2 me-md-0 mt-1 res-width">
                                 <div class="modal-header ">
                                     <h5 class="modal-title text-center" id="modalSessionLabel">Usuario X</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
@@ -235,12 +245,14 @@
                                 </div>
                                 <div class="modal-body">
                                     <div class="row">
-                                        <div class="col-4 mx-auto">
+                                        <div class="col-4 mx-auto mb-2">
                                             <a href="#"><img class="img-fluid" src="assets/user.png" alt="user"></a>
                                         </div>
                                     </div>
                                     <div class="col-12 text-center">
-                                        Usuario X
+                                        Usuario                                         
+                                    </div>
+                                    <div class="col-12 text-center text-break">                                        
                                         usuario@usuario.com
                                     </div>
                                     <hr>
@@ -277,7 +289,7 @@
 
                                     <div class="row">
                                         <div class="col-6 col-md-3 col-lg-2">Productos</div>
-                                        <div class="col-6 col-md-3 d-none d-lg-inline-block">Descripcion</div>
+                                        <div class="col-6 col-md-3 d-none d-lg-inline-block">Descripción</div>
                                         <div class="col-md-3 col-lg-2 d-none d-lg-inline-block">Precio</div>
                                         <div class="d-none d-lg-inline-block col-md-4 col-lg-2">cantidad</div>
                                         <div class="d-none d-lg-inline-block col-md-2">Total + Envío</div>
@@ -291,8 +303,9 @@
                                         <div class="col-6 col-md-3 d-none d-lg-inline-block">
                                             Iphone X 64GB
                                         </div>
+
                                         <!-- Only mobil -->
-                                        <div class="col-7 col-md-7 col-lg-2 align-self-start d-lg-none">
+                                        <div class="col-7 col-md-7 col-lg-2 align-self-start d-lg-none res-sm">
                                             <div class="row align-items-center g-2">
                                                 <div class="col-12">
                                                     <span>Nombre: Iphone X</span>
@@ -304,7 +317,7 @@
                                                     <span>Cantidad:</span>
                                                 </div>
                                                 <div class="col-7">
-                                                    <div class="input-group  input-group-sm  w-75 ">
+                                                    <div class="input-group  input-group-sm   ">
                                                         <button class="btn btn-secondary py-0">-</button>
                                                         <input type="text" class="form-control shadow-none py-0"
                                                             value="1">
@@ -321,10 +334,10 @@
 
                                         <div class="col-md-3 col-lg-2 d-none d-lg-inline-block">$4534.00 MXN</div>
                                         <div class="d-none d-lg-inline-block col-md-4 col-lg-2">
-                                            <div class="input-group input-group-sm w-75">
-                                                <button class="btn btn-secondary">-</button>
+                                            <div class="input-group input-group-sm ">
+                                                <button class="btn btn-secondary shadow-none">-</button>
                                                 <input type="text" class="form-control shadow-none" value="1">
-                                                <button class="btn btn-secondary">+</button>
+                                                <button class="btn btn-secondary shadow-none">+</button>
                                             </div>
                                         </div>
                                         <div class="col-md-3 col-lg-2 d-none d-lg-inline-block">$4634.00 MXN</div>
@@ -337,8 +350,8 @@
                                         </div>
 
                                     </div>
-                                    <div class="modal-footer mt-4">
-                                        <button type="button" class="btn btn-primary">Comprar todo</button>
+                                    <div class="modal-footer mt-4 pe-0">
+                                        <button type="button" class="btn btn-primary shadow-none">Comprar todo</button>
                                     </div>
                                 </div>
                             </div>
@@ -354,7 +367,7 @@
     <main>
 
         <!-- CAROUSEL  -->
-        <div class="carousel-container mb-5">
+        <div class="carousel-container mb-3">
 
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
